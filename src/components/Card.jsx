@@ -1,5 +1,5 @@
 import React from 'react'
-import css from "../index.css"
+import '../index.css';
 
 function Card(props) {
 
@@ -12,7 +12,7 @@ function Card(props) {
                     <div className="card_info">
                         <span className="card_category"> {props.title}</span>
                         <h3 className="card_title"> </h3>
-                        <a href={props.link} target="_blank">
+                        <a href={props.link} target="">
                             <button> Add to Cart</button>
                         </a>
                     </div>
