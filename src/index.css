@@ -10,10 +10,12 @@ padding: 30px 0;
 text-align: center;
 font-family: "Raleway", sans-serif;
 text-transform: uppercase;
-font-size: 13px;
+font-size: 30px;
 letter-spacing: 2px;
 font-weight: 500px;
 margin-bottom: 30px;
+color: midnightblue;
+background-color: #868686;
 }
 
 .cards{
@@ -82,4 +84,55 @@ button {
   cursor: pointer;
 }
 
+/*Mobile phones .*/
+@media (max-width: 768px) {
+  .heading_style {
+    color: red;
+    background-color:aqua;
+    display: block;
+    }
+.card {
+  width: 100%;
+ display: block;
+}
+.cards{
+  width: 75%;
+  display: block;
+}
+.card_img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+}
+@media (max-width: 468px) {
+.cards{
+  padding: 10%;
+  box-sizing: border-box;
+}
+.card_img{
+  box-sizing: border-box;
+}
+}
 
+
+
+
+/*tablets .*/
+
+@media (max-width: 772px) {
+
+.card {
+  width: 100%;
+ display: block;
+}
+.cards{
+  width: 75%;
+  display: block;
+}
+.card_img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+}
