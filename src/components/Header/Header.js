@@ -1,20 +1,34 @@
 import React from 'react';
-import Navbarabc from './Navbar';
+import PropTypes from "prop-types";
+import "./Header.css";
+// import Navbarabc from './Navbarabc';
 
 
 
-const Header = () => {
+const Header = ({changePageName, currentPage}) => {
+    const pages = ["Home", "About", "News", "Contact"];
+
     return (
-        <div>
-            <Navbarabc />
-            
-            <h1 className="heading_style">Newly arrived perfumes</h1>;
-            
-        </div>
+       <header className="Header-container">
+          <div className="Header-logo">Perfume Palace</div> 
+            <ul className="Header-container-ul">
+               {pages.map((page, index) => (
+                   <li 
+                   key={index}
+                   onClick={() => changePageName(page)}
+                   className={currentPage === page ? "Header-li-active" : ""}
+                   >
+                    {page}
+                   </li>
+                    ))} 
+            </ul>
+            </header>
+         );
+};
 
-    )
-
-}
-
+Header.propTypes = {
+  changePageName: PropTypes.func.isRequired,
+  currentPage: PropTypes.string.isRequired,
+};
 
 export default Header;
